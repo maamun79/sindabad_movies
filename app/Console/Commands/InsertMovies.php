@@ -49,7 +49,7 @@ class InsertMovies extends Command
 
             if (count($chek_existing) > 0){
                 //update
-                $up_movie = Movie::where('movie_id', $movie)->first();
+                $up_movie = Movie::where('movie_id', $movie['id'])->first();
                 $up_movie->movie_id          = $movie['id'];
                 $up_movie->original_title    = $movie['original_title'];
                 $up_movie->backdrop_path     = $movie['backdrop_path'];
